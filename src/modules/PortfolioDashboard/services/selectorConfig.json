@@ -1,0 +1,14 @@
+{
+  "version": "1.0.0",
+  "discoveredAt": "2026-02-09",
+  "keyStats": {
+    "containerClass": "gyFHrc",
+    "labelClass": "mfs7Fc",
+    "valueClass": "P6K39c"
+  },
+  "eps": {
+    "scriptClass": "ds:13",
+    "quarterly": { "dataOffset": 2, "epsIndex": 2 },
+    "annual": { "dataOffset": 1, "epsIndex": 2 }
+  }
+}

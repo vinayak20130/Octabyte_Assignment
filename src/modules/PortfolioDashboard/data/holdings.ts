@@ -1,7 +1,7 @@
 import type { StockHolding } from '../types/portfolio';
 
 export const holdings: StockHolding[] = [
-  // Financial Sector
+  // Financial
   {
     id: 'hdfc-bank',
     name: 'HDFC Bank',
@@ -11,6 +11,7 @@ export const holdings: StockHolding[] = [
     exchange: 'NSE',
     exchangeCode: 'HDFCBANK',
     yahooSymbol: 'HDFCBANK.NS',
+    googleSymbol: 'HDFCBANK:NSE',
   },
   {
     id: 'bajaj-finance',
@@ -21,6 +22,7 @@ export const holdings: StockHolding[] = [
     exchange: 'NSE',
     exchangeCode: 'BAJFINANCE',
     yahooSymbol: 'BAJFINANCE.NS',
+    googleSymbol: 'BAJFINANCE:NSE',
   },
   {
     id: 'icici-bank',
@@ -31,6 +33,7 @@ export const holdings: StockHolding[] = [
     exchange: 'BSE',
     exchangeCode: '532174',
     yahooSymbol: 'ICICIBANK.NS',
+    googleSymbol: 'ICICIBANK:NSE',
   },
   {
     id: 'bajaj-housing',
@@ -41,6 +44,7 @@ export const holdings: StockHolding[] = [
     exchange: 'BSE',
     exchangeCode: '544252',
     yahooSymbol: 'BAJAJHFL.NS',
+    googleSymbol: 'BAJAJHFL:NSE',
   },
   {
     id: 'savani-financials',
@@ -51,9 +55,10 @@ export const holdings: StockHolding[] = [
     exchange: 'BSE',
     exchangeCode: '511577',
     yahooSymbol: '511577.BO',
+    googleSymbol: '511577:BOM',
   },
 
-  // Tech Sector
+  // Tech
   {
     id: 'affle-india',
     name: 'Affle India',
@@ -63,6 +68,7 @@ export const holdings: StockHolding[] = [
     exchange: 'NSE',
     exchangeCode: 'AFFLE',
     yahooSymbol: 'AFFLE.NS',
+    googleSymbol: 'AFFLE:NSE',
   },
   {
     id: 'lti-mindtree',
@@ -73,6 +79,7 @@ export const holdings: StockHolding[] = [
     exchange: 'NSE',
     exchangeCode: 'LTIM',
     yahooSymbol: 'LTIM.NS',
+    googleSymbol: 'LTIM:NSE',
   },
   {
     id: 'kpit-tech',
@@ -83,6 +90,7 @@ export const holdings: StockHolding[] = [
     exchange: 'BSE',
     exchangeCode: '542651',
     yahooSymbol: 'KPITTECH.NS',
+    googleSymbol: 'KPITTECH:NSE',
   },
   {
     id: 'tata-tech',
@@ -93,6 +101,7 @@ export const holdings: StockHolding[] = [
     exchange: 'BSE',
     exchangeCode: '544028',
     yahooSymbol: 'TATATECH.NS',
+    googleSymbol: 'TATATECH:NSE',
   },
   {
     id: 'bls-eservices',
@@ -103,6 +112,7 @@ export const holdings: StockHolding[] = [
     exchange: 'BSE',
     exchangeCode: '544107',
     yahooSymbol: 'BLSE.NS',
+    googleSymbol: 'BLSE:NSE',
   },
   {
     id: 'tanla',
@@ -113,9 +123,10 @@ export const holdings: StockHolding[] = [
     exchange: 'BSE',
     exchangeCode: '532790',
     yahooSymbol: 'TANLA.NS',
+    googleSymbol: 'TANLA:NSE',
   },
 
-  // Consumer Sector
+  // Consumer
   {
     id: 'dmart',
     name: 'Dmart',
@@ -125,6 +136,7 @@ export const holdings: StockHolding[] = [
     exchange: 'NSE',
     exchangeCode: 'DMART',
     yahooSymbol: 'DMART.NS',
+    googleSymbol: 'DMART:NSE',
   },
   {
     id: 'tata-consumer',
@@ -135,6 +147,7 @@ export const holdings: StockHolding[] = [
     exchange: 'BSE',
     exchangeCode: '532540',
     yahooSymbol: 'TATACONSUM.NS',
+    googleSymbol: 'TATACONSUM:NSE',
   },
   {
     id: 'pidilite',
@@ -145,9 +158,10 @@ export const holdings: StockHolding[] = [
     exchange: 'BSE',
     exchangeCode: '500331',
     yahooSymbol: 'PIDILITIND.NS',
+    googleSymbol: 'PIDILITIND:NSE',
   },
 
-  // Power Sector
+  // Power
   {
     id: 'tata-power',
     name: 'Tata Power',
@@ -157,6 +171,7 @@ export const holdings: StockHolding[] = [
     exchange: 'BSE',
     exchangeCode: '500400',
     yahooSymbol: 'TATAPOWER.NS',
+    googleSymbol: 'TATAPOWER:NSE',
   },
   {
     id: 'kpi-green',
@@ -167,6 +182,7 @@ export const holdings: StockHolding[] = [
     exchange: 'BSE',
     exchangeCode: '542323',
     yahooSymbol: 'KPIGREEN.NS',
+    googleSymbol: 'KPIGREEN:NSE',
   },
   {
     id: 'suzlon',
@@ -177,6 +193,7 @@ export const holdings: StockHolding[] = [
     exchange: 'BSE',
     exchangeCode: '532667',
     yahooSymbol: 'SUZLON.NS',
+    googleSymbol: 'SUZLON:NSE',
   },
   {
     id: 'gensol',
@@ -187,9 +204,10 @@ export const holdings: StockHolding[] = [
     exchange: 'BSE',
     exchangeCode: '542851',
     yahooSymbol: 'GENSOL.NS',
+    googleSymbol: 'GENSOL:NSE',
   },
 
-  // Pipe Sector
+  // Pipe
   {
     id: 'hariom-pipes',
     name: 'Hariom Pipes',
@@ -199,6 +217,7 @@ export const holdings: StockHolding[] = [
     exchange: 'BSE',
     exchangeCode: '543517',
     yahooSymbol: 'HARIOMPIPE.NS',
+    googleSymbol: 'HARIOMPIPE:NSE',
   },
   {
     id: 'astral',
@@ -209,6 +228,7 @@ export const holdings: StockHolding[] = [
     exchange: 'NSE',
     exchangeCode: 'ASTRAL',
     yahooSymbol: 'ASTRAL.NS',
+    googleSymbol: 'ASTRAL:NSE',
   },
   {
     id: 'polycab',
@@ -219,9 +239,10 @@ export const holdings: StockHolding[] = [
     exchange: 'BSE',
     exchangeCode: '542652',
     yahooSymbol: 'POLYCAB.NS',
+    googleSymbol: 'POLYCAB:NSE',
   },
 
-  // Others Sector
+  // Others
   {
     id: 'clean-science',
     name: 'Clean Science',
@@ -231,6 +252,7 @@ export const holdings: StockHolding[] = [
     exchange: 'BSE',
     exchangeCode: '543318',
     yahooSymbol: 'CLEAN.NS',
+    googleSymbol: 'CLEAN:NSE',
   },
   {
     id: 'deepak-nitrite',
@@ -241,6 +263,7 @@ export const holdings: StockHolding[] = [
     exchange: 'BSE',
     exchangeCode: '506401',
     yahooSymbol: 'DEEPAKNTR.NS',
+    googleSymbol: 'DEEPAKNTR:NSE',
   },
   {
     id: 'fine-organic',
@@ -251,6 +274,7 @@ export const holdings: StockHolding[] = [
     exchange: 'BSE',
     exchangeCode: '541557',
     yahooSymbol: 'FINEORG.NS',
+    googleSymbol: 'FINEORG:NSE',
   },
   {
     id: 'gravita',
@@ -261,6 +285,7 @@ export const holdings: StockHolding[] = [
     exchange: 'BSE',
     exchangeCode: '533282',
     yahooSymbol: 'GRAVITA.NS',
+    googleSymbol: 'GRAVITA:NSE',
   },
   {
     id: 'sbi-life',
@@ -271,5 +296,6 @@ export const holdings: StockHolding[] = [
     exchange: 'BSE',
     exchangeCode: '540719',
     yahooSymbol: 'SBILIFE.NS',
+    googleSymbol: 'SBILIFE:NSE',
   },
 ];
