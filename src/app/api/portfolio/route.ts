@@ -1,37 +1,24 @@
-import { holdings } from '@/src/modules/PortfolioDashboard/data/holdings';
-import { fetchYahooQuotes } from '@/src/modules/PortfolioDashboard/services/yahooFinance';
+import { holdings } from '@/modules/PortfolioDashboard/data/holdings';
+import { fetchYahooQuotes } from '@/modules/PortfolioDashboard/services/yahooFinance';
+import { fetchGoogleFinanceData } from '@/modules/PortfolioDashboard/services/googleFinance';
+import { aggregatePortfolio } from '@/modules/PortfolioDashboard/utils/aggregate';
 import { NextResponse } from 'next/server';
 
-export async function GET() {
+export async function GET(): Promise<NextResponse> {
   try {
     const symbols = holdings.map((h) => h.yahooSymbol);
-    const yahooData = await fetchYahooQuotes(symbols);
+    const googleTickers = holdings.map((h) => ({
+      googleSymbol: h.googleSymbol,
+      yahooSymbol: h.yahooSymbol,
+    }));
 
-    const stocks = holdings.map((holding) => {
-      const yahoo = yahooData.get(holding.yahooSymbol);
-      const investment = holding.purchasePrice * holding.quantity;
-      const cmp = yahoo?.regularMarketPrice ?? null;
-      const presentValue = cmp !== null ? cmp * holding.quantity : null;
-      const gainLoss = presentValue !== null ? presentValue - investment : null;
-      const gainLossPercent =
-        gainLoss !== null ? (gainLoss / investment) * 100 : null;
+    const [yahooData, googleData] = await Promise.all([
+      fetchYahooQuotes(symbols),
+      fetchGoogleFinanceData(googleTickers),
+    ]);
 
-      return {
-        ...holding,
-        investment,
-        cmp,
-        presentValue,
-        gainLoss,
-        gainLossPercent,
-        peRatio: yahoo?.trailingPE ?? null,
-        error: yahoo?.error ?? null,
-      };
-    });
-
-    return NextResponse.json({
-      stocks,
-      lastUpdated: new Date().toISOString(),
-    });
+    const portfolio = aggregatePortfolio(holdings, yahooData, googleData);
+    return NextResponse.json(portfolio);
   } catch (error) {
     return NextResponse.json(
       { error: `Server error: ${(error as Error).message}` },
